@@ -20,3 +20,25 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
+document.addEventListener("DOMContentLoaded", function () {
+
+    const resultCard = document.querySelector(".result-card.has-result");
+    const errorMessage = document.querySelector(".alert-danger, .field-error");
+
+    if (resultCard) {
+        setTimeout(function () {
+            resultCard.scrollIntoView({
+                behavior: "smooth",
+                block: "center"
+            });
+        }, 300);
+    }
+
+    else if (errorMessage) {
+        errorMessage.scrollIntoView({
+            behavior: "smooth",
+            block: "center"
+        });
+    }
+
+});
