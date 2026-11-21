@@ -1011,9 +1011,7 @@ h1 span {
 }
 
 
-/* =================================
-   COVERCAST LIVING BRAND ANIMATION
-================================= */
+/* COVERCAST LIVE MEDICAL BRAND */
 
 .brand-name {
     display: inline-block;
@@ -1021,31 +1019,28 @@ h1 span {
     letter-spacing: -1px;
 
     background: linear-gradient(
-        100deg,
+        90deg,
         #ffffff 0%,
-        #ffb4c0 25%,
-        #ffffff 45%,
-        #a78bfa 65%,
-        #ffffff 85%
+        #ff526b 20%,
+        #ffffff 40%,
+        #a78bfa 60%,
+        #ff526b 80%,
+        #ffffff 100%
     );
 
-    background-size: 250% auto;
+    background-size: 300% auto;
     background-clip: text;
     -webkit-background-clip: text;
-    color: transparent;
+    -webkit-text-fill-color: transparent;
 
-    animation:
-        brandFlow 5s linear infinite,
-        brandPulse 2.4s ease-in-out infinite;
+    animation: brandFlow 3s linear infinite;
 
-    filter: drop-shadow(0 0 5px rgba(239, 68, 68, .18));
+    filter: drop-shadow(0 0 7px rgba(255, 82, 107, .3));
 }
-
-/* Moving gradient */
 
 @keyframes brandFlow {
     from {
-        background-position: 200% center;
+        background-position: 100% center;
     }
 
     to {
@@ -1053,40 +1048,13 @@ h1 span {
     }
 }
 
-/* Gentle heartbeat */
-
-@keyframes brandPulse {
-    0%, 100% {
-        transform: scale(1);
-    }
-
-    8% {
-        transform: scale(1.035);
-    }
-
-    16% {
-        transform: scale(1);
-    }
-
-    24% {
-        transform: scale(1.02);
-    }
-
-    32% {
-        transform: scale(1);
-    }
-}
-
-/* Stop animation when reduced motion is preferred */
-
 @media (prefers-reduced-motion: reduce) {
     .brand-name {
         animation: none;
-        color: #ffffff;
         background: none;
+        -webkit-text-fill-color: white;
     }
 }
-
 
 
 
