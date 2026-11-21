@@ -165,9 +165,28 @@ h1 span {
 }
 
 .btn-primary-gradient:hover {
-    color: white;
+    color: #ffffff !important;
+    background: linear-gradient(
+        110deg,
+        #2563eb,
+        #4f46e5,
+        #8b5cf6
+    );
+
     transform: translateY(-3px);
-    box-shadow: 0 17px 36px rgba(70,100,240,.4);
+
+    box-shadow:
+        0 12px 30px rgba(59,130,246,.4),
+        0 0 20px rgba(139,92,246,.25);
+}
+
+.btn-primary-gradient:hover i {
+    color: #ffffff !important;
+    transform: translateX(5px);
+}
+
+.btn-primary-gradient i {
+    transition: transform .3s ease;
 }
 
 .btn-outline-light {
@@ -881,7 +900,114 @@ h1 span {
 }
 
 
+/* =====================================
+   PREMIUM AI ESTIMATE BUTTON
+===================================== */
 
+.submit-btn {
+    position: relative;
+    overflow: hidden;
+
+    background: linear-gradient(
+        110deg,
+        #4338ca 0%,
+        #4f46e5 35%,
+        #2563eb 70%,
+        #06b6d4 100%
+    );
+
+    border: 1px solid rgba(129, 212, 255, 0.4);
+
+    color: #ffffff;
+
+    border-radius: 16px;
+
+    box-shadow:
+        0 8px 25px rgba(59, 130, 246, 0.3),
+        0 0 18px rgba(6, 182, 212, 0.16),
+        inset 0 1px 1px rgba(255,255,255,0.3);
+
+    transition: all 0.35s ease;
+}
+
+/* Animated light reflection */
+
+.submit-btn::before {
+    content: "";
+    position: absolute;
+
+    top: 0;
+    left: -120%;
+
+    width: 70%;
+    height: 100%;
+
+    background: linear-gradient(
+        110deg,
+        transparent,
+        rgba(255,255,255,0.35),
+        transparent
+    );
+
+    transform: skewX(-25deg);
+
+    transition: left 0.7s ease;
+    pointer-events: none;
+}
+
+/* Button hover */
+
+.submit-btn:hover {
+    background: linear-gradient(
+        110deg,
+        #312e81,
+        #4338ca,
+        #0891b2
+    );
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 12px 35px rgba(59,130,246,0.4),
+        0 0 25px rgba(6,182,212,0.3);
+
+    color: white;
+}
+
+.submit-btn:hover::before {
+    left: 150%;
+}
+
+/* Button text and arrow */
+
+.submit-btn > * {
+    position: relative;
+    z-index: 1;
+}
+
+.submit-btn i {
+    transition: transform 0.3s ease;
+}
+
+.submit-btn:hover i {
+    transform: translateX(6px);
+}
+
+/* Click effect */
+
+.submit-btn:active {
+    transform: scale(0.98);
+}
+
+/* Accessibility */
+
+@media (prefers-reduced-motion: reduce) {
+    .submit-btn,
+    .submit-btn::before,
+    .submit-btn i {
+        transition: none;
+    }
+}
 
 
 
