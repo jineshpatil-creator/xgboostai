@@ -735,7 +735,150 @@ h1 span {
 
 
 
+/* =================================
+   COVECAST PREMIUM 3D LOGO
+================================= */
 
+.brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    perspective: 600px;
+    text-decoration: none;
+    transition: transform 0.3s ease;
+}
+
+/* 3D Shield */
+
+.brand-mark {
+    width: 42px;
+    height: 42px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+    border-radius: 13px;
+
+    background: linear-gradient(
+        145deg,
+        #8b7cff,
+        #5145d9,
+        #3125a8
+    );
+
+    color: white;
+    font-size: 19px;
+
+    transform-style: preserve-3d;
+
+    box-shadow:
+        0 5px 0 #30259b,
+        0 9px 18px rgba(91, 77, 230, 0.35),
+        inset 0 2px 5px rgba(255,255,255,.45);
+
+    animation: shieldFloat 3s ease-in-out infinite;
+
+    transition:
+        transform .4s ease,
+        box-shadow .4s ease;
+}
+
+/* Animated light reflection */
+
+.brand-mark::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    border-radius: inherit;
+
+    background: linear-gradient(
+        120deg,
+        transparent 25%,
+        rgba(255,255,255,.55) 48%,
+        transparent 70%
+    );
+
+    background-size: 200% 100%;
+    animation: logoShine 3s linear infinite;
+
+    pointer-events: none;
+}
+
+/* Shield icon */
+
+.brand-mark i {
+    position: relative;
+    z-index: 2;
+
+    filter: drop-shadow(0 2px 2px rgba(0,0,0,.25));
+
+    animation: heartPulse 2s ease-in-out infinite;
+}
+
+/* 3D floating animation */
+
+@keyframes shieldFloat {
+    0%, 100% {
+        transform: translateY(0) rotateX(0deg) rotateY(0deg);
+    }
+
+    50% {
+        transform: translateY(-5px) rotateX(8deg) rotateY(-8deg);
+    }
+}
+
+/* Moving light */
+
+@keyframes logoShine {
+    0% {
+        background-position: 200% 0;
+    }
+
+    100% {
+        background-position: -200% 0;
+    }
+}
+
+/* Heartbeat effect */
+
+@keyframes heartPulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.13);
+    }
+}
+
+/* Hover interaction */
+
+.brand:hover .brand-mark {
+    transform: rotateY(20deg) rotateX(12deg) scale(1.12);
+
+    box-shadow:
+        0 7px 0 #30259b,
+        0 15px 30px rgba(91, 77, 230, .55),
+        inset 0 2px 8px rgba(255,255,255,.6);
+}
+
+/* Brand text */
+
+.brand:hover {
+    transform: translateY(-2px);
+}
+
+/* Accessibility */
+
+@media (prefers-reduced-motion: reduce) {
+    .brand-mark,
+    .brand-mark::before,
+    .brand-mark i {
+        animation: none;
+    }
+}
 
 
 
