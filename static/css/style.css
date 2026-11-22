@@ -1348,3 +1348,281 @@ h1 span {
 .result-card .compare-line strong {
     color: #ffffff !important;
 }
+
+/* ==========================================
+   COVERCAST PREMIUM 3D GOLD LOGO
+========================================== */
+
+.cc-logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 14px;
+    text-decoration: none;
+    user-select: none;
+    cursor: pointer;
+}
+
+.cc-badge-scene {
+    perspective: 600px;
+}
+
+.cc-badge {
+    position: relative;
+    width: 58px;
+    height: 58px;
+    border-radius: 16px;
+    display: grid;
+    place-items: center;
+
+    background: linear-gradient(
+        145deg,
+        #232d5e 0%,
+        #0d1329 65%,
+        #1b1710 100%
+    );
+
+    border: 1.5px solid rgba(240, 193, 90, 0.65);
+
+    box-shadow:
+        0 10px 24px rgba(0, 0, 0, 0.55),
+        0 0 18px rgba(240, 193, 90, 0.22),
+        inset 0 1px 1px rgba(255, 245, 204, 0.55),
+        inset 0 -6px 12px rgba(0, 0, 0, 0.55);
+
+    transform-style: preserve-3d;
+    overflow: hidden;
+
+    animation: ccFloat3D 4.5s ease-in-out infinite;
+
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+.cc-logo:hover .cc-badge {
+    transform: rotateY(14deg) rotateX(8deg) scale(1.06);
+
+    box-shadow:
+        0 14px 30px rgba(0, 0, 0, 0.65),
+        0 0 28px rgba(240, 193, 90, 0.48),
+        inset 0 1px 2px rgba(255, 245, 204, 0.8);
+}
+
+/* Metallic light sweep */
+
+.cc-sheen {
+    position: absolute;
+    inset: -40%;
+
+    background: linear-gradient(
+        115deg,
+        transparent 35%,
+        rgba(255, 243, 196, 0.32) 50%,
+        transparent 65%
+    );
+
+    transform: translateX(-120%) rotate(12deg);
+    animation: ccSheen 3.8s ease-in-out infinite;
+    pointer-events: none;
+}
+
+/* Live indicator */
+
+.cc-live-dot {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+
+    background: #34d399;
+    box-shadow: 0 0 8px #34d399;
+
+    animation: ccDotPulse 2s ease-in-out infinite;
+    z-index: 2;
+}
+
+/* SVG icon */
+
+.cc-icon {
+    width: 42px;
+    height: 42px;
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.45));
+    transform: translateZ(14px);
+    position: relative;
+    z-index: 1;
+}
+
+.cc-heart {
+    transform-origin: 32px 32px;
+    animation: ccHeartbeat 2.4s ease-in-out infinite;
+}
+
+.cc-pulse {
+    stroke-dasharray: 46;
+    stroke-dashoffset: 46;
+    animation: ccPulseDraw 2.4s ease-in-out infinite;
+}
+
+/* Brand typography */
+
+.cc-wordmark {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.05;
+}
+
+.cc-brand {
+    font-family: 'Inter', 'Plus Jakarta Sans', system-ui, sans-serif;
+    font-size: 1.45rem;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    color: #f8fafc;
+}
+
+.cc-brand-gold {
+    background: linear-gradient(
+        90deg,
+        #fff3c4 0%,
+        #f0c15a 45%,
+        #c78d24 75%,
+        #fff3c4 100%
+    );
+
+    background-size: 220% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+
+    animation: ccGoldText 4s linear infinite;
+}
+
+.cc-tagline {
+    margin-top: 5px;
+    font-size: 0.62rem;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    color: rgba(240, 193, 90, 0.9);
+}
+
+/* Animations */
+
+@keyframes ccFloat3D {
+    0%, 100% {
+        transform: translateY(0) rotateY(-6deg) rotateX(4deg);
+    }
+
+    50% {
+        transform: translateY(-2.5px) rotateY(8deg) rotateX(-4deg);
+    }
+}
+
+@keyframes ccSheen {
+    0%, 55% {
+        transform: translateX(-130%) rotate(12deg);
+    }
+
+    100% {
+        transform: translateX(130%) rotate(12deg);
+    }
+}
+
+@keyframes ccHeartbeat {
+    0%, 100% {
+        transform: scale(1);
+    }
+
+    14% {
+        transform: scale(1.09);
+    }
+
+    28% {
+        transform: scale(1);
+    }
+
+    42% {
+        transform: scale(1.06);
+    }
+
+    56% {
+        transform: scale(1);
+    }
+}
+
+@keyframes ccPulseDraw {
+    0% {
+        stroke-dashoffset: 46;
+        opacity: 0.3;
+    }
+
+    45% {
+        stroke-dashoffset: 0;
+        opacity: 1;
+    }
+
+    80% {
+        stroke-dashoffset: 0;
+        opacity: 1;
+    }
+
+    100% {
+        stroke-dashoffset: -46;
+        opacity: 0.2;
+    }
+}
+
+@keyframes ccDotPulse {
+    0%, 100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    50% {
+        transform: scale(1.35);
+        opacity: 0.65;
+    }
+}
+
+@keyframes ccGoldText {
+    to {
+        background-position: 220% center;
+    }
+}
+
+/* Accessibility */
+
+@media (prefers-reduced-motion: reduce) {
+    .cc-logo,
+    .cc-badge,
+    .cc-sheen,
+    .cc-live-dot,
+    .cc-heart,
+    .cc-pulse,
+    .cc-brand-gold {
+        animation: none !important;
+        transition: none !important;
+    }
+}
+
+/* Mobile logo */
+
+@media (max-width: 575px) {
+    .cc-badge {
+        width: 48px;
+        height: 48px;
+    }
+
+    .cc-icon {
+        width: 35px;
+        height: 35px;
+    }
+
+    .cc-brand {
+        font-size: 1.2rem;
+    }
+
+    .cc-tagline {
+        font-size: 0.52rem;
+    }
+}
