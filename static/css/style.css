@@ -1338,3 +1338,13 @@ h1 span {
         transition: none !important;
     }
 }
+
+/* GOLD RESULT CARD - COMPARISON LABEL CONTRAST */
+
+.result-card .compare-line .d-flex {
+    color: #63451e !important;
+}
+
+.result-card .compare-line strong {
+    color: #ffffff !important;
+}
