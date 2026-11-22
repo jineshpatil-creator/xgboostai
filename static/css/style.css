@@ -999,3 +999,342 @@ h1 span {
         transition-duration: 0.01ms !important;
     }
 }
+
+/* =========================================
+   COVERCAST PREMIUM BRAND & HERO BUTTON
+========================================= */
+
+/* PREMIUM MEDICAL LOGO */
+
+.brand-mark {
+    background: linear-gradient(
+        145deg,
+        #0f766e,
+        #164e78,
+        #0b2942
+    ) !important;
+
+    border: 1px solid rgba(255,255,255,0.3);
+
+    border-radius: 15px;
+
+    box-shadow:
+        0 5px 0 #092c43,
+        0 12px 25px rgba(15,118,110,0.35),
+        inset 0 2px 5px rgba(255,255,255,0.3);
+
+    transition: all 0.3s ease;
+}
+
+.brand:hover .brand-mark {
+    transform: translateY(-3px) scale(1.06);
+
+    box-shadow:
+        0 7px 0 #092c43,
+        0 16px 30px rgba(15,118,110,0.4);
+}
+
+/* PREMIUM BRAND NAME */
+
+.brand-name {
+    background: linear-gradient(
+        90deg,
+        #ffffff,
+        #b9e5df,
+        #ffffff
+    ) !important;
+
+    background-size: 200% auto;
+
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+}
+
+/* HERO ESTIMATE BUTTON */
+
+.btn-primary-gradient {
+    background: linear-gradient(
+        135deg,
+        #164e78,
+        #0f766e
+    ) !important;
+
+    border: 1px solid rgba(255,255,255,0.15);
+
+    color: #ffffff !important;
+
+    box-shadow:
+        0 8px 22px rgba(15,76,92,0.25);
+
+    transition: all 0.3s ease;
+}
+
+/* HERO BUTTON HOVER */
+
+.btn-primary-gradient:hover {
+    background: linear-gradient(
+        135deg,
+        #123f63,
+        #115e59
+    ) !important;
+
+    color: #ffffff !important;
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 12px 28px rgba(15,76,92,0.3);
+}
+
+/* HERO BUTTON ARROW */
+
+.btn-primary-gradient i {
+    color: #ffffff !important;
+    transition: transform 0.3s ease;
+}
+
+.btn-primary-gradient:hover i {
+    transform: translateX(5px);
+}
+
+/* ACCESSIBILITY */
+
+@media (prefers-reduced-motion: reduce) {
+    .brand-mark,
+    .brand-name,
+    .btn-primary-gradient {
+        animation: none !important;
+        transition: none !important;
+    }
+}
+
+
+/* ==========================================
+   COVERCAST LUXURY METALLIC GOLD RESULT CARD
+========================================== */
+
+.result-card {
+    position: relative;
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at 50% 45%,
+            rgba(255,255,230,0.85),
+            transparent 55%
+        ),
+        linear-gradient(
+            135deg,
+            #b58a43 0%,
+            #f8e5a9 18%,
+            #d5ae62 38%,
+            #fff0b8 55%,
+            #c49a50 78%,
+            #8e632e 100%
+        ) !important;
+
+    border: 2px solid #d5ad59;
+    border-radius: 25px;
+
+    color: #40280e !important;
+
+    box-shadow:
+        0 18px 45px rgba(137,96,35,0.20),
+        inset 0 0 0 5px rgba(255,239,184,0.45),
+        inset 0 0 25px rgba(126,78,20,0.18);
+
+    transition: all 0.35s ease;
+}
+
+/* GOLDEN INNER BORDER */
+
+.result-card::before {
+    content: "";
+    position: absolute;
+    inset: 7px;
+
+    border: 1px solid rgba(255,241,190,0.85);
+    border-radius: 19px;
+
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* KEEP CONTENT ABOVE DECORATION */
+
+.result-card > * {
+    position: relative;
+    z-index: 1;
+}
+.result-card > .result-decoration {
+    position: absolute;
+    z-index: 1;
+}
+
+/* PREMIUM ICON BOX */
+
+.result-empty-icon {
+    background: linear-gradient(
+        145deg,
+        #593714,
+        #c18a35,
+        #f8df96,
+        #87521e
+    ) !important;
+
+    color: #fff0bd !important;
+
+    border: 2px solid #f4d78e;
+
+    border-radius: 17px;
+
+    box-shadow:
+        0 5px 12px rgba(88,54,16,0.30),
+        inset 0 2px 5px rgba(255,255,255,0.45);
+}
+
+/* SECTION LABEL */
+
+.result-label {
+    color: #76501c !important;
+    font-weight: 800;
+    letter-spacing: 0.16em;
+}
+
+/* MAIN HEADING */
+
+.result-card h3 {
+    color: #42290e !important;
+    font-weight: 800;
+}
+
+/* DESCRIPTION */
+
+.result-card > p {
+    color: #61431d !important;
+    line-height: 1.8;
+}
+
+/* ESTIMATED AMOUNT */
+
+.result-amount {
+    color: #704617 !important;
+
+    text-shadow:
+        0 2px 4px rgba(255,255,255,0.35);
+}
+
+/* RESULT CAPTION */
+
+.result-caption {
+    color: #76501c !important;
+}
+
+/* DIVIDER */
+
+.result-rule {
+    background: linear-gradient(
+        90deg,
+        transparent,
+        #a7782f,
+        #f8e3a3,
+        #a7782f,
+        transparent
+    ) !important;
+}
+
+/* SUBHEADINGS */
+
+.result-card h4 {
+    color: #523411 !important;
+}
+
+/* SMALL TEXT */
+
+.result-small {
+    color: #715126 !important;
+}
+
+/* COMPARISON BARS */
+
+.bar-track {
+    background: rgba(92,58,19,0.15) !important;
+}
+
+.bar-track span {
+    background: linear-gradient(
+        90deg,
+        #98631f,
+        #f8df96,
+        #bd8735
+    ) !important;
+}
+
+.bar-track.alt span {
+    background: linear-gradient(
+        90deg,
+        #80602b,
+        #c5a05c,
+        #e8cc86
+    ) !important;
+}
+
+/* DIFFERENCE BOX */
+
+.difference-box {
+    background: rgba(255,244,207,0.35) !important;
+
+    border: 1px solid rgba(139,95,35,0.35);
+
+    color: #63451e !important;
+}
+
+.difference-box strong {
+    color: #492c0c !important;
+}
+
+/* BOTTOM DECORATIVE ICONS */
+
+.result-decoration {
+    color: rgba(92,55,15,0.60) !important;
+}
+
+/* RESULT AGAIN LINK */
+
+.result-again {
+    color: #714719 !important;
+    font-weight: 800;
+}
+
+.result-again:hover {
+    color: #3f260d !important;
+}
+
+/* STATUS INDICATOR */
+
+.result-pulse {
+    background: #a4772d !important;
+
+    box-shadow:
+        0 0 0 6px rgba(164,119,45,0.15);
+}
+
+/* HOVER EFFECT */
+
+.result-card:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 24px 55px rgba(137,96,35,0.25),
+        inset 0 0 0 5px rgba(255,239,184,0.5);
+}
+
+/* ACCESSIBILITY */
+
+@media (prefers-reduced-motion: reduce) {
+    .result-card {
+        transition: none !important;
+    }
+}
