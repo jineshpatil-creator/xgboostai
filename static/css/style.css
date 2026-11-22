@@ -1643,7 +1643,7 @@ h1 span {
 .hero-slides {
     position: absolute;
     inset: 0;
-    z-index: -2;
+    z-index: 0;
     overflow: hidden;
 }
 
@@ -1674,7 +1674,7 @@ h1 span {
 .hero-slider .hero-shade {
     position: absolute;
     inset: 0;
-    z-index: -1;
+    z-index: 1;
 
     background:
         linear-gradient(
