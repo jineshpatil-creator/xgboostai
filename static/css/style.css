@@ -1803,3 +1803,13 @@ h1 span {
         transition: none !important;
     }
 }
+/* ==========================================
+   COVERCAST ANALYTICS SLIDE ALIGNMENT
+========================================== */
+
+.hero-slides .hero-slide:nth-child(2) {
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-color: #101b32;
+}
