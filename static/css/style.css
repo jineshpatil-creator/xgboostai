@@ -1813,3 +1813,7 @@ h1 span {
     background-repeat: no-repeat;
     background-color: #101b32;
 }
+.cc-live-dot,
+.logo-pulse {
+    display: none !important;
+}
