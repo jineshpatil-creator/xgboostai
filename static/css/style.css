@@ -436,8 +436,8 @@ h1 span {
     font-weight: 800;
     color: #8a93a4;
     letter-spacing: .1em;
+    display: none !important;
 }
-
 .form-label {
     font-weight: 700;
     font-size: .9rem;
